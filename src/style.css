@@ -1,0 +1,70 @@
+
+:root{
+    margin: 0;
+    padding: 0;
+    font-family: "Markazi Text", serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #78f38d;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-container {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 550px;
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #78f38d;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.todo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    justify-content: center;
+}
+
+.todo-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-body-bottom {
+    border-radius: 30px;
+    padding-left: 30px;
+    margin-bottom: 25px;
+    width: auto;
+}
+
+.todo-body input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+
