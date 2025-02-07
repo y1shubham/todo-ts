@@ -64,11 +64,12 @@ input[type=text] {
 
         const container = document.createElement('ul');
         this.todoList.forEach((element) => {
-            let li = document.createElement('li');
+            let li = document.createElement('li'); 
+            let status = element.status ? 'Task Completed' : 'Mark as Completed';
 
             li.innerHTML = `
             <input type="text" value="${element.item}" readonly />
-            <button id="status">${element.status}</button>
+            <button id="status">${status}</button>
             <button id="update">Edit</button>
             <button id="delete">Delete</button>            
             `
@@ -85,13 +86,21 @@ input[type=text] {
 
 
             li.querySelector('#status')?.addEventListener('click', () => {
-                if (element.status) {
+                if (!element.status) {
+                    
+                    element.status = true;
+                    status !== status;
                     li.style.textDecoration = 'line-through';
                     li.style.color = 'red';
-
+                    localStorage.setItem("todo-list", JSON.stringify(this.todoList));
+                    this.render();
                 } else {
                     li.style.textDecoration = 'none';
                     li.style.color = 'black';
+                    element.status = false;
+                    status !== status;
+                    localStorage.setItem("todo-list", JSON.stringify(this.todoList));
+                    this.render();
                 }
 
             });
